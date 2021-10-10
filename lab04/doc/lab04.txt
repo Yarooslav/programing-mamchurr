@@ -1,0 +1,40 @@
+Mamchur Yaroslav Kit 121A
+Задание номер 20
+цель: найти l,s,v. Известно радиус,число пи.
+
+int main()
+{
+double r = 5;//указываем радиус 
+double PI = 3.14;//число пи 
+float l = 2*PI*r;//считаем длину окружности 
+float s = PI*(r*r);//считаем площадь круга
+ float v =4/3*PI*(r*r*r);//считаем объем круга 
+printf(l);//выводим l=31.3999996
+printf(s);//выводим s=78.5
+printf(v);//выводим v=392.5
+}
+ldb main.bin
+(lldb) target create "main.bin"
+Current executable set to '/home/yarik/programing-mamchurr/lab04/src/main.bin' (x86_64).
+(lldb) b 10
+Breakpoint 1: where = main.bin`main + 126 at main.c:13:1, address = 0x000000000040118e
+(lldb) r
+Process 3780 launched: '/home/yarik/programing-mamchurr/lab04/src/main.bin' (x86_64)
+Process 3780 stopped
+* thread #1, name = 'main.bin', stop reason = breakpoint 1.1
+    frame #0: 0x000000000040118e main.bin`main at main.c:13:1
+   10  	printf(l);
+   11  	printf(s);
+   12  	printf(v);
+-> 13  	}
+   14  	
+(lldb) p l
+(float) $0 = 31.3999996
+(lldb) p s
+(float) $1 = 78.5
+(lldb) p v
+(float) $2 = 392.5
+(lldb) 
+
+
+
