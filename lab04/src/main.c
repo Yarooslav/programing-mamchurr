@@ -10,5 +10,6 @@ int main()
 if (num1 == num2 || num2 == num3 || num3 == num1) printf("Одинаковые цифры есть");
 else printf("Одинаковых цифр нет");
 
+
 return 0;
 }
