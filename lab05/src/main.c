@@ -1,11 +1,19 @@
-int main ()
+int main()
 {
-int num = 31;
-bool l= true;
-for (int i=2; i<num; i++)
-{
-if(num % i == 0)
-{l=false;}
-}
-return 0;
+    int n = 9;
+    int f=1;
+    if(n%2==0)
+    {
+       for(int i=2; i<=n; i+=2)
+       {
+           f*=i;
+       }
+    }
+    else
+    {
+        for(int i=1; i<=n; i+=2)
+       {
+           f*=i;
+       }
+    }
 }
