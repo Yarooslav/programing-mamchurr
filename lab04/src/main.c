@@ -7,8 +7,8 @@ int main()
  	int num2 = number / 10 % 10;
  	int num3 = number % 10;
 
-if (num1 == num2 || num2 == num3 || num3 == num1) printf("Одинаковые цифры есть");
-else printf("Одинаковых цифр нет");
+if (num1 == num2 || num2 == num3 || num3 == num1) string a= "Одинаковых цифр есть";
+else string b = "Одинаковых цифр нет";
 
 
 return 0;
