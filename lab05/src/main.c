@@ -15,5 +15,5 @@ int main()
        {
            f*=i;
        }
-    }
+    }return f;
 }
