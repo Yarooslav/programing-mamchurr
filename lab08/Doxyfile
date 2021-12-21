@@ -1,6 +1,6 @@
 ## Common Project info
-PROJECT_NAME = "Тестовий проект"
-PROJECT_BRIEF = "Демонстрація документування коду засобами `doxygen`"
+PROJECT_NAME = "laba08"
+PROJECT_BRIEF = "Демонстрація праці функції"
 PROJECT_NUMBER = 0.1
 
 ## output options

@@ -1,21 +1,47 @@
+/**
+ * @mainpage
+ * # Загальне завдання
+ * 1.Помножити матрицю саму на себе.Визначити подвійний факторіал.
+ *
+ *
+ * @author Mamchur Y.
+ * @date 14-dec-2021
+ * @version 1.3
+ */
+
+/**
+ * @author Mamchur Y.
+ * @date 14-dec-2021
+ * @version 1.3
+ */
+
+/**
+ * Головна функція.
+ *
+ * Послідовність дій:
+ * - cтворити функцію для (матріц і факторіала)
+ * - скопиювати код з лаб 5 і лаб 6
+ * - полагодити всі помилки
+ * - написати коментарі
+ * @return успішний код повернення з програми (0)
+ */
+
+
 #define N 3//указал размер массива 
 #define M 3//указал размер массива 
-	void   sum(int values1[N][M])
-	{
-	int values_12[N][M]= { { 0, 0, 0 },
-                          { 0, 0, 0 },
-                           { 0, 0, 0 } };;
-    for(int i = 0; i < N; i++)//создал цикл. чтобы потом можно было помножить н>
-           for(int j = 0; j < M; j++)//выше также 
+        void   sum(int values[],int size)
+        {
+    for(int i = 0; i < size; i++)//создал цикл. проход по строчке
+           for(int j = 0; j < size; j++)//проход по столбцам 
                 {
-                 values_12[i][j] = 0;// матрица нулевая
-                for(int k = 0; k < N; k++)//выше также
-        values_12[i][j] = values_12[i][j] + values1[i][k] * values1[k][j] ;//тут мы>
+                for(int k = 0; k < size; k++)//умножения матрицы
 
-	}
-		}
+        values[i * size + j] += (values[i * size + k] * values[k * size + j]);
 
-	int fact(int num)
+                }
+        }
+
+        int fact(int num)
 {
     int f=1;
     if(num%2==0)
@@ -34,19 +60,13 @@
     }return f;
 
 }
-	int main ()
-	{
-	int n=9;
-	int r;
-	int m;
-	int values[N][M] = { { 11, 12, 13 },//создал двухмерный массив ,задал е>
-                           { 21, 22, 23 },
-                           { 31, 32, 33 } };
-
-//	sum(values[N][M]);
-	r=fact(n);
-//	m=sum(values[N][M]);
-	return 0;
-	}
-
+        int main ()
+        {
+        int n=9;
+        int r;
+        int values[N][M] = { { 11, 12, 13 },{ 21, 22, 23},{ 31, 32, 33 } };
+        sum((int*) values, N * M);
+        r=fact(n);
+        return 0;
+        }
 
