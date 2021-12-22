@@ -33,7 +33,7 @@
 }
 	int main ()
 	{
-	int n=9;
+	int n = (rand() % 49) + 1;
 	int r;
 	int values[N][M] = { { 11, 12, 13 },{ 21, 22, 23},{ 31, 32, 33 } };
 	sum((int*) values, N * M);
