@@ -2,19 +2,25 @@
 
 int fact(int num)
 {
-	int f=1;
-	if(num%2==0)
+	int f = 1;
+	if (num % 2 == 0)
+
 	{
-		for(int i=2; i<=num; i+=2)
+		for (int i = 2; i <= num; i += 2)
+
 		{
-			f*=i;
+			f *= i;
 		}
 	}
+
 	else
+
 	{
-		for(int i=1; i<=num; i+=2)
+		for (int i = 1; i <= num; i += 2)
+
 		{
-			f*=i;
+			f *= i;
 		}
-	}	return f;
+	}
+	return f;
 }
