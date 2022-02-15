@@ -16,7 +16,7 @@ test.bin: test/test.c
 test: clean prep compile
 	LLVM_PROFILE_FILE="dist/test.profraw" ./dist/test.bin
 	$(CLANG_PREFIX)llvm-profdata merge -sparse dist/test.profraw -o dist/test.profdata
-	$(CLANG_PREFIX)llvm-cov report dist/test.bin -instr-profile=dist/test.profdata src/*.c
+	$(CLANG_PREFIX)llvm-cov recoport dist/test.bin -instr-profile=dist/test.profdata src/*.c
 	$(CLANG_PREFIX)llvm-cov show dist/test.bin -instr-profile=dist/test.profdata src/*.c --format html > dist/coverage.html
 run: clean prep compile
 	./dist/main.bin

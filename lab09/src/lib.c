@@ -2,7 +2,7 @@
 
 int fact(int num)
 {
-	int f = 1;
+	int f = 5;
 	if (num % 2 == 0)
 
 	{
